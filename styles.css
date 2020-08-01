@@ -2,8 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,400&family=Prata&display=swap');
 
 :root {
-    --colour1: #f7cadd;
-    --colour2: #cf15ce;
+    --colour1: #faf2e0;
+    --colour2: #f08ff0;
     --colour3: #4892e9;
     --colour4: #7a0165;
     --colourlighttext: #ffffff;
@@ -27,35 +27,63 @@ p {
     font-family: var(--sans-serif);
     font-size: 16px;
 }
-header {
+.header {
     display: flex;
     justify-content: space-between;
-    background-color: var(--colour1);
+    background-color: var(--colour3);
 }
 
 .logo {
     padding: 1rem;
 }
 
+#menu {
+    display: none;
+    padding-bottom: 1rem;
+}
+.icon {
+    font-size: 24px;
+    padding: 1rem;
+    color: var(--colour1);
+
+}
+
 nav > ul {
-    display: flex;
-    justify-content: space-between;
+    /* display: flex;
+    justify-content: space-between; */
     list-style-type: none;
+    background-color: var(--colour3
+);
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-inline-start: 0px;
 }
 
 nav > ul > li {
-    margin: 1em;
+    margin: 0;
     font-family: var(--sans-serif);
+    padding: 1rem;
+    font-size: 24px;
+    text-align: center;
 }
 
 nav > ul > li > a {
     text-decoration: none;
+    color: var(--colour1);
+}
+
+nav > ul > li > a:hover {
+    color: var(--colour2);
 }
 
 .aboutme {
     background-color: var(--colour1);
     padding: 1rem;
     text-align: center;
+}
+
+#sarahimage {
+ height: 16rem;
 }
 
 .aboutme > h1 {

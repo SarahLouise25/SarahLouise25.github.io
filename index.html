@@ -4,21 +4,29 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 	<header>
-		<div class="logo"><img src="logo_portblk.svg" alt="Logo"></div>
+		<div class="header">
+			<div class="logo"><img src="logo_portblk.svg" alt="Logo"></div>
+			<a href="javascript:void(0);" class="icon" onclick="onAnchorClick()">
+				<i id="menuIcon" class="fa fa-bars"></i>
+			</a>
+		</div>
 		<nav>
-			<ul>
-				<li><a href="#About">About</a></li>
-				<li><a href="#Work">Work</a></li>
-				<li><a href="#Contact">Contact</a></li>
+			<ul id="menu">
+				<li><a href="#About" onclick="onAnchorClick()">About</a></li>
+				<li><a href="#Work" onclick="onAnchorClick()">Work</a></li>
+				<li><a href="#Contact" onclick="onAnchorClick()">Contact</a></li>
 			</ul>
 		</nav>
 	</header>
+
 	<section id="About" class="aboutme">
+		<img src="portfoliimg.svg" id="sarahimage" alt="Sarah cartoon image">
 		<h1>About me</h1>
 		<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam vero repellat sapiente quam a repudiandae
 			id? Libero earum quod sit consectetur sequi. Pariatur itaque reiciendis iure harum nemo, porro architecto.
@@ -39,6 +47,23 @@
 	<footer>
 		<p>Made by Richard and Sarah 2020 (in lockdown)</p>
 	</footer>
+	<script>
+
+		function onAnchorClick() {
+			const open = "block"
+			const closed = "none"
+			const menu = document.getElementById("menu")
+			const icon = document.getElementById("menuIcon")
+
+			if (menu.style.display === open) {
+				menu.style.display = closed
+				icon.classList.replace("fa-close", "fa-bars")
+			} else {
+				menu.style.display = open
+				icon.classList.replace("fa-bars", "fa-close")
+			}
+		}
+	</script>
 </body>
 
 </html>
