@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,400&family=Prata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alice&family=Poppins:wght@700&display=swap');
 
 :root {
     --colour1: #faf2e0;
@@ -8,8 +8,8 @@
     --colour4: #7a0165;
     --colourlighttext: #ffffff;
     --colourdarktext: black;
-    --sans-serif: "Open Sans", sans-serif;
-    --serif: "Prata", serif;
+    --paragraphfont: "Alice", sans-serif;
+    --headingfont: "Poppins", serif;
     
 }
 
@@ -20,12 +20,19 @@ body {
 }
 
 h1 {
-    font-family: var(--serif);
+    font-family: var(--headingfont);
     font-size: 32px;
 }
+
+h2 {
+    font-family: var(--headingfont);
+}
+
 p {
-    font-family: var(--sans-serif);
-    font-size: 16px;
+    font-family: var(--paragraphfont);
+    font-size: 18px;
+    padding-bottom: 1.5rem;
+    line-height:1.5;
 }
 .header {
     display: flex;
@@ -61,7 +68,7 @@ nav > ul {
 
 nav > ul > li {
     margin: 0;
-    font-family: var(--sans-serif);
+    font-family: var(--headingfont);
     padding: 1rem;
     font-size: 24px;
     text-align: center;
@@ -101,6 +108,16 @@ nav > ul > li > a:hover {
     padding: 0.5rem 0rem 1rem 0rem;
 }
 
+.imagecontainer {
+    max-width: inherit;
+}
+
+.imagecontainer > img {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+}
+
 .contact {
     background-color: var(--colour1);
     padding: 1rem;
@@ -110,6 +127,15 @@ nav > ul > li > a:hover {
 
 .contact > h1 {
     padding: 0.5rem 0rem 1rem 0rem;
+}
+
+.linkedinlogo {
+    color: var(--colour3);
+    font-size: 2rem;
+}
+
+.linkedinlogo:hover {
+    color: var(--colour2);
 }
 
 section > h1, p {
